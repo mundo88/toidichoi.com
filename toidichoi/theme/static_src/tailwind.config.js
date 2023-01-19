@@ -4,6 +4,7 @@
  * If you need the full config, get it from here:
  * https://unpkg.com/browse/tailwindcss@latest/stubs/defaultConfig.stub.js
  */
+const plugin = require('tailwindcss/plugin')
 
 module.exports = {
     content: [
@@ -41,8 +42,20 @@ module.exports = {
          */
         // '../../**/*.py'
     ],
+    darkMode: 'class',
+    plugins:[
+        plugin(function({ addComponents }) {
+            addComponents({
+                '.hero-bg': {
+                    backgroundImage: "url('/static/images/hero-bg.png')",
+                }
+            }
+        )
+    })],
     theme: {
-        extend: {},
+        extend: {
+           
+        },
     },
     plugins: [
         /**

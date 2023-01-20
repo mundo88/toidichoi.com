@@ -1,4 +1,16 @@
 {% extends 'base.html' %}
+{% block head %}
+<style>
+@keyframes blink {
+    to {
+        visibility: hidden
+    }
+}
+</style>
+{% endblock %}
+{% block script %}
+    <script src="/static/js/text_typing.js"></script>
+{% endblock %}
 {% block root %}
     {% include 'nav.html' %}
     {% include 'home_header.html' %}

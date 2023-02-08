@@ -1,13 +1,10 @@
-<header class="hero-pattern h-[550px] bg-[url('/static/images/texture-light@2x.jpg')] relative flex items-center justify-center">
-    <div class="header-container absolute top-0 left-0 bg-[url(https://static.vecteezy.com/system/resources/previews/012/861/859/large_2x/bar-with-wooden-counter-beer-pumps-and-bottles-free-vector.jpg)] h-full w-full bg-center bg-no-repeat bg-cover after:w-full after:h-full after:absolute after:top-0 opacity-7 after:bottom-0 after:bg-gradient-to-b after:from-black/80 after:to-black/40">
-        
-    </div>
+<header class="mt-24 relative flex items-center justify-center">
     <div class="flex flex-col gap-4 relative z-10 items-center w-full md:p-0 p-3">
         <div class="text-2xl md:text-5xl text-center">
-            <span class="text-white font-semibold" is="type-async" id="type-text"></span>
-            <span class="blinking-cursor select-none animate-[blink_1s_steps(2,_start)_infinite] text-gray-300">|</span>
+            <span class="text-gray-900 font-semibold" is="type-async" id="type-text"></span>
+            <span class="blinking-cursor select-none animate-[blink_1s_steps(2,_start)_infinite] text-gray-600">|</span>
         </div>
-        <span class="text-gray-300 text-center text-sm md:text-lg block mb-5 mt-2 font-semibold">
+        <span class="text-gray-500 text-center text-sm md:text-lg block mb-5 mt-2 font-semibold">
             Mang đến cho bạn những sự lựa chọn tốt nhất cho các chuyến đi du lịch
         </span>
         <div class="md:w-1/2 p-6">   
@@ -17,28 +14,24 @@
                     <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                         <svg aria-hidden="true" class="w-7 h-7 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
                     </div>
-                    <input type="text" id="voice-search" class="bg-gray-50 text-gray-900 text-lg rounded-lg ring-4  ring-transparent focus:ring-4 focus:ring-orange-300 outline-none border-none block w-full pl-12 pr-10 p-2.5  py-4 font-semibold" placeholder="Tìm kiếm địa điểm, khu vực, phong cách ..." required>
+                    <input type="text" id="voice-search" class="bg-white text-gray-900 outline-none inset-0 text-lg border border-gray-500 focus:border-black block w-full pl-12 pr-10 p-2.5  py-4 font-semibold" placeholder="Tìm kiếm địa điểm, khu vực, phong cách ..." required>
                     <button type="button" class="absolute inset-y-0 right-0 flex items-center pr-3">
                         <svg aria-hidden="true" class="w-6 h-6 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0A5 5 0 015 8a1 1 0 00-2 0 7.001 7.001 0 006 6.93V17H6a1 1 0 100 2h8a1 1 0 100-2h-3v-2.07z" clip-rule="evenodd"></path></svg>
                     </button>
                 </div>
-                <button type="submit" class="inline-flex items-center py-4 px-6 ml-2 text-lg font-medium text-white bg-orange-700 rounded-lg  hover:bg-orange-800 focus:ring-4 focus:outline-none focus:ring-orange-300  whitespace-nowrap">
-                    
-                    Tìm Kiếm
-                </button>
+                <button type="submit" class="inline-flex items-center py-4 px-6 ml-2 text-lg font-medium text-white bg-black  hover:bg-black/90 whitespace-nowrap">Tìm Kiếm</button>
             </div>
-            <div class="hastag relative -ml-2">
-                <div class="flex md:space-x-3 md:gap-0 items-center justify-center gap-2 md:justify-start flex-wrap max-w-full p-4 pl-2 overflow-hidden md:flex-nowrap">
-                    {%for tag in tags %}
-                    <button class="tagname flex items-center space-x-2 font-semibold whitespace-nowrap px-4 py-2 bg-teal-600 text-sm text-gray-200 rounded-lg cursor-pointer hover:bg-teal-700 focus:ring-4 focus:ring-teal-300 active:ring-teal-300 fill-gray-200 stroke-1 stroke-gray-200">
-                        {{ tag.icon|safe }}
-                        <span>{{ tag.name }}</span>
-                    </button>
-                {% endfor %}
-                </div>
-
-            </div>
+            <div class="hastag relative -ml-2 ">
+              <div class="flex md:space-x-3 md:gap-0 items-center justify-center gap-2 md:justify-start flex-wrap max-w-full p-4 pl-2 overflow-hidden md:flex-nowrap">
+                  {%for tag in tags %}
+                  <button class="tagname flex items-center space-x-2 font-semibold whitespace-nowrap px-4 py-2 bg-white text-sm text-gray-700  cursor-pointer border border-gray-500 hover:border-black fill-gray-700 stroke-1 stroke-gray-700">
+                      {{ tag.icon|safe }}
+                      <span>{{ tag.name }}</span>
+                  </button>
+              {% endfor %}
+              </div>
+          </div>
         </div>
-
     </div>
 </header>
+

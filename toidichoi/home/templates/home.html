@@ -2,19 +2,25 @@
 {% block head %}
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.min.css">
 <style>
-@keyframes blink {
-    to {
-        visibility: hidden
-    }
-}
-.glide__arrow {
-    position: absolute;
-    display: block;
-    top: 50%;
-    z-index: 2;
+
+  .hero-search.active {
     opacity: 1;
-    transform: translateY(-50%);
-}
+    pointer-events: all;
+  }
+
+  @keyframes blink {
+      to {
+          visibility: hidden
+      }
+  }
+  .glide__arrow {
+      position: absolute;
+      display: block;
+      top: 50%;
+      z-index: 2;
+      opacity: 1;
+      transform: translateY(-50%);
+  }
 </style>
 {% endblock %}
 {% block script %}

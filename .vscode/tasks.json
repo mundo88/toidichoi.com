@@ -6,7 +6,7 @@
         {
             "label": "django",
             "type": "shell",
-            "command": "echo Hello"
+            "command": "${file}"
         }
     ]
 }
